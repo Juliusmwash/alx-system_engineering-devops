@@ -1,2 +1,2 @@
 #!/bin/bash
-echo [[:upper:]]* >> /tmp/u/
+echo [[:upper:]]* >> /tmp/u
