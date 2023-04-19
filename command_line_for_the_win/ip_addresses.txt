@@ -1,0 +1,4 @@
+This is ip address 192.168.1.1, can it really be extract?
+What about this 203.0.113.1?
+10.0.0.1 I think this will be extracted...?
+This 127.0.0.1 together with 172.16.0.1 are they extractable?
