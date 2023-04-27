@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Story of passwords.
+
+#shellcheck disable=SC2034
+while IFS=: read -r user password uid gid full_name home shell; do
+	echo "The user $user is part of the $gid gang, lives in $home and rides $shell. User ID's place is protected by the passcode $password, more info about the user here: USER ID INFO"
+done < /etc/passwd
+
