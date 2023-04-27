@@ -2,7 +2,16 @@
 # Story of passwords.
 
 #shellcheck disable=SC2034
-while IFS=: read -r user password uid gid full_name home shell; do
-	echo "The user $user is part of the $gid gang, lives in $home and rides $shell. User ID's place is protected by the passcode $password, more info about the user here: $user"
+while IFS=: read -r user pass uid gid full home shell; do
+    if [ $uid -lt 1000 ]; then
+        continue
+    fi
+    
+    gang=$(grep "^$user:" /etc/group | cut -d ':' -f 3)
+    if [ -z "$gang" ]; then
+        gang="65534"
+    fi
+    
+    echo "The user $user is part of the $gang gang, lives in $home and rides $shell. $gang's place is protected by the passcode $pass, more info about the user here: $full"
 done < /etc/passwd
 
