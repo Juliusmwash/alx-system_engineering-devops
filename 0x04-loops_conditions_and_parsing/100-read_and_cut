@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Displays the content of the file /etc/passwd.
 
+# shellcheck disable=SC2034
 while IFS=: read -r user passwd uid gid full_name home shell
 do
     echo "Username: $user"
