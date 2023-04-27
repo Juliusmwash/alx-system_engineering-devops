@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Prints hours and minutes
+
+hour=0
+min=1
+while [ $hour -le 12 ]
+do
+	echo "hour: $hour"
+	while [ $min -le 59 ]
+	do
+		echo "$min"
+		min=$((min+1))
+	done
+	min=1
+	hour=$((hour+1))
+done
