@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Prints "Best School" 10 times but on the nineth, prints "hi"
-#+ after printing "Best School"
+# Prints "Best School" 10 times but on the nineth iteration,
+#+ prints "hi" after printing "Best School" on a new line.
 
 i=1
 while [ $i -le 10 ]
 do
-	echo "Best school"
+	echo "Best School"
 	if [ $i -eq 9 ]
 	then
 		echo "Hi"
