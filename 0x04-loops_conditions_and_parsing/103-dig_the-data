@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Apache log files
 
-awk '{print $1" "$9}' apache-access.log | sort | uniq -c | awk '{print $1" "$2" "$3}' | sort -rn
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | awk '{print "\t"$1, $2, $3}'
 
