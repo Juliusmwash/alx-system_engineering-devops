@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# prints "Best School" 10 times using a while loop
+
+i=1
+while [ $i -le 10 ]
+do
+	echo "Best School"
+	i=$((i+1))
+	# let i+=1 same as i=$((i+1)) but not preferred here,
+	#+ than latter
+done
