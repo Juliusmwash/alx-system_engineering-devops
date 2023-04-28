@@ -3,16 +3,8 @@
 #+ With a sleep 2 in between each iteration
 #+ "I am invincible!!!" when receiving a SIGTERM signal
 
-# Define the signal handler for SIGTERM
-function sigterm_handler {
-  echo "I am invincible!!!"
-  exit 0
-}
+trap 'echo "I am invincible!!!"; pkill -TERM -f "7-highlander"' SIGTERM
 
-# Register the signal handler for SIGTERM
-trap sigterm_handler SIGTERM
-
-# Loop indefinitely, displaying "To infinity and beyond"
 while true; do
   echo "To infinity and beyond"
   sleep 2
