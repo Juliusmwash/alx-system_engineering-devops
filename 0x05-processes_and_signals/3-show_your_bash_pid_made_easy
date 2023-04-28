@@ -6,7 +6,7 @@ for pid in /proc/*/; do
     if [ -e "$pid/cmdline" ]; then
         cmdline=$(tr '\0' ' ' < "$pid/cmdline")
         if [[ "$cmdline" =~ .*bash.* ]]; then
-            echo "PID: ${pid##*/}, Process Name: ${cmdline##*/}"
+            echo "${pid##*/} ${cmdline##*/}"
         fi
     fi
 done
