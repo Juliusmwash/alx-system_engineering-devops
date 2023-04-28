@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Stops the program without using kill or killall
+
+pkill -TERM -f '4-to_infinity_and_beyond'
+
