@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# prints a list of currently running processes
+
+ps axo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command
+
