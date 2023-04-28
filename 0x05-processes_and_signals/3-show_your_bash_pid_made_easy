@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# displays the PID, along with the process name, of processes whose name contain the word bash.
+
+for pid in /proc/*/; do
+    pid=${pid%*/}
+    if [ -e "$pid/cmdline" ]; then
+        cmdline=$(tr '\0' ' ' < "$pid/cmdline")
+        if [[ "$cmdline" =~ .*bash.* ]]; then
+            echo "PID: ${pid##*/}, Process Name: ${cmdline##*/}"
+        fi
+    fi
+done
+
