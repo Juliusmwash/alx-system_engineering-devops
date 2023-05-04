@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Bash script that listens on port 98 on
+
+while true
+do
+  echo "Listening on port 98"
+  nc -l localhost 98
+done
+
