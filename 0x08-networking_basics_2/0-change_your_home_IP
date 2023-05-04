@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Bash script that configures an Ubuntu server
+
+sudo sed -i '/localhost/s/^/127.0.0.2 /' /etc/hosts
+sudo sed -i '/facebook.com/s/^/8.8.8.8 /' /etc/hosts
+
