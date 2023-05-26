@@ -76,7 +76,7 @@ Want to familiarise yourself with the web infrastructure? Then <a href="web-infr
 <p>--- It is important to note that security is a continuous process, and it requires ongoing monitoring, updating, and improvement. Regularly assess the security of the infrastructure, stay informed about emerging threats, and adapt security measures accordingly to ensure a robust and secure web infrastructure.</p>
 <h3>Monitoring</h3>
 <p>Monitoring is a crucial aspect of managing a web infrastructure, as it allows you to observe the health, performance, and availability of the system's components.</p>
-<p><b>Here are some key considerations for monitoring a 3-server web infrastructure</b>:</p>
+<p><b>Here are some key considerations for monitoring a web infrastructure</b>:</p>
 <p>Monitor the servers, load balancer, and networking components to ensure they are functioning properly. This includes monitoring CPU and memory usage, disk space, network connectivity, and hardware health. Utilize monitoring tools and services that can provide real-time alerts or notifications when issues are detected.</p>
 <p>Monitor the performance and availability of the web applications running on the servers. Track response times, throughput, error rates, and resource utilization to identify performance bottlenecks or application-specific issues. Monitor key application metrics and set up alerts for abnormal behavior or errors.</p>
 <p>Monitor the resource utilization of the servers, such as CPU, memory, disk I/O, and network bandwidth. Tracking resource usage helps identify potential performance issues, capacity constraints, or resource-intensive processes that may impact the overall system performance.</p>
