@@ -39,4 +39,6 @@ Consider this <a href="web-infrastructure.md">link</a> if you want to gain a dee
 <h3>Downtime when maintenance needed</h3>
 <p>Performing maintenance tasks that require restarting the web server can result in downtime. During the maintenance period, the website or service hosted on that server will be inaccessible to users.</p>
 <p>The duration of the downtime depends on various factors, including the time required to deploy the new code, restart the web server, and ensure that everything is functioning correctly after the restart. It can typically range from a few seconds to several minutes, depending on the complexity of the application and the specific maintenance tasks being performed.</p>
-
+<h3>Not scallable</h3>
+<p>A single-server infrastructure has limitations when it comes to handling high incoming traffic. Scaling is a key consideration when the volume of incoming traffic exceeds the capabilities of a single server.</p>
+<p>In a single-server infrastructure, you may encounter issues such as slow response times, website crashes, or even complete unavailability when there is an overwhelming amount of traffic. Scaling allows you to address these challenges by distributing the load across multiple servers or resources.</p>
