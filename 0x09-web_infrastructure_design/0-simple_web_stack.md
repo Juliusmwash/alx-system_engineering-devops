@@ -1,5 +1,5 @@
 <h1>Simple web stack</h1>
-Consider this <a href="web-infrastructure.md">link</a> if you want to gain a deeper understanding of the web infrastructure.
+Consider this <a href="web-infrastructure.md">link</a> if you want to gain a deeper understanding of the web infrastructure. I have deeply explained it.
 <h4>What is the server using to communicate with the computer of the user requesting the website?</h4>
 <p>When a server communicates with the computer of a user requesting a website, it uses the <b>Internet Protocol (IP) and the Hypertext Transfer Protocol (HTTP)</b>.</p>
 <p>Here is a brief explanation of how communication process typically works</p>
