@@ -1,4 +1,4 @@
-<h1>SIMPLE WEB STACK</h1>
+<h1>WEB INFRASTRUCTURE</h1>
 
 
 ![SIMPLE WEB STACK](./0-simple_web_stack.jpg)
