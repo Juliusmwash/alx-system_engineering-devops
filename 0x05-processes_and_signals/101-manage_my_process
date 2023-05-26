@@ -30,7 +30,7 @@ case "$1" in
         fi
 
         # Stop the process and delete the PID file
-        kill $(cat $PID_FILE)
+        kill "$(cat $PID_FILE)"
         rm $PID_FILE
         echo "manage_my_process stopped"
         ;;
@@ -38,7 +38,7 @@ case "$1" in
     restart)
         # Check if process is running and stop it
         if [ -e $PID_FILE ]; then
-            kill $(cat $PID_FILE)
+            kill "$(cat $PID_FILE)"
             rm $PID_FILE
         fi
 
