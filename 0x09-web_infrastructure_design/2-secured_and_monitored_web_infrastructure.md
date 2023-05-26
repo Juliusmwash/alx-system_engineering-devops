@@ -1,2 +1,13 @@
 <h1>Secured and monitored web infrastructure</h1>
 <p>If stuck somewhere in this file, having a look at the following link might help you understand better. Here is the <a href="1-distributed_web_infrastructure.md">link</a>.</p>
+<h3>Firewalls</h3>
+<p>Firewalls are security devices or software applications that monitor and control the network traffic between different networks, such as the Internet and a private local area network (LAN). Their primary purpose is to enforce a set of rules or policies that determine which network connections and communication packets are allowed to pass through and which ones should be blocked.</p>
+<p>Firewalls act as a barrier between trusted internal networks (like a company's internal network) and untrusted external networks (like the Internet). They analyze incoming and outgoing network traffic based on predefined rules and criteria, such as source and destination IP addresses, port numbers, protocols, and packet contents. By inspecting this information, firewalls make decisions on whether to allow or block traffic.</p>
+<p><b>Here are a few key functions of firewalls:</b></p>
+<p>(1) <b>Packet Filtering</b>: Firewalls examine individual network packets and compare them against a set of rules. Based on the rules, they determine whether to allow or deny the packets' passage.</p>
+<p>(2) <b>Stateful Inspection</b>: This method tracks the state of network connections and inspects the context of packets to identify if they belong to an established and legitimate connection or if they are suspicious.</p>
+<p>(3) <b>Application-Level Gateway (Proxy Firewall)</b>: These firewalls act as intermediaries between external systems and internal networks. They can examine the contents of the network traffic at the application layer and make decisions based on the application protocol being used.</p>
+<p>(4) <b>Network Address Translation (NAT)</b>: Firewalls often perform Network Address Translation to translate internal private IP addresses to a single external IP address, thereby hiding the internal network structure from external entities.</p>
+<p>(5) <b>Virtual Private Network (VPN) Support</b>: Many firewalls have built-in VPN functionality, allowing secure remote access to internal networks over public networks.</p>
+<p>--- Firewalls play a crucial role in protecting networks and systems from unauthorized access, malicious activities, and various types of cyber threats, including malware, hacking attempts, and unauthorized data exfiltration. They are an essential component of network security and are deployed in various environments, ranging from personal computers and small businesses to large-scale enterprise networks.</p>
+
