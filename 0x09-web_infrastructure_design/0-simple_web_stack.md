@@ -1,7 +1,28 @@
 <h1>Simple web stack</h1>
-Almost everthing has been fully explained <a href="web-infrastructure.md">click</a>
-
-
-[here](./README.md)
-
-
+If not all, almost everything has been fully explained <a href="web-infrastructure.md">here</a>
+<h4>What is the server using to communicate with the computer of the user requesting the website?</h4>
+<p>When a server communicates with the computer of a user requesting a website, it uses the <b>Internet Protocol (IP) and the Hypertext Transfer Protocol (HTTP)</b>.</p>
+<p>Here is a brief explanation of how communication process typically works</p>
+<p>User Initiates Request: The user's computer (client) initiates a request by entering a URL or clicking on a link to a website in their web browser.</p>
+<p>The client's web browser first contacts a DNS resolver (usually provided by the Internet Service Provider) to resolve the domain name (e.g., www.foobar.com) into an IP address. The DNS resolver looks up the IP address associated with the domain name.</p>
+<p>Once the client has the IP address of the server, it establishes a TCP/IP connection with the server. TCP (Transmission Control Protocol) ensures reliable data transmission by breaking data into packets and verifying their successful delivery.</p>
+<p>The client sends an HTTP request to the server, specifying the URL and the type of request (e.g., GET, POST). This request includes information such as headers, cookies, and any data required by the server to process the request.</p>
+<p>The server receives the HTTP request and processes it accordingly. This involves interpreting the URL, reading any data sent in the request, and determining the appropriate action to take.</p>
+<p>If the requested URL corresponds to a static file (e.g., HTML, CSS, JavaScript), the server retrieves the file from its file system and sends it back to the client in the HTTP response. If the request requires dynamic content generation, the server interacts with the application server or executes server-side code to generate the appropriate response.</p>
+<p>The server constructs an HTTP response, which includes the requested content or the result of processing the request. The response contains information such as headers, cookies, and the content itself.</p>
+<p>The server sends the HTTP response back to the client over the established TCP/IP connection. The response is transmitted in packets that traverse the internet infrastructure, including routers and switches, until they reach the client's computer.</p>
+<p>The client's web browser receives the HTTP response and processes it to render the web content. This involves interpreting the HTML, executing any embedded scripts (e.g., JavaScript), applying CSS styles, and rendering the final web page.</p>
+<p>Once the data transmission is complete, the server closes the TCP/IP connection, indicating the end of the communication between the server and the client.</p>
+<p>In summary, the server uses the Internet Protocol (IP) and the Hypertext Transfer Protocol (HTTP) to communicate with the computer of the user requesting the website. The server responds to HTTP requests by sending back HTTP responses containing the requested web content or the result of processing the request.</p>
+<h3>What type of DNS record www is in www.foobar.com?</h3>
+<p>The "www" in "www.foobar.com" is typically a subdomain and can be associated with various DNS record types depending on how it is configured. The most common DNS record associated with the "www" subdomain is the CNAME (Canonical Name) record.</p>
+<p>A CNAME record is used to create an alias or redirect one domain or subdomain to another. In the case of "www.foobar.com," the CNAME record for the "www" subdomain might point to the root domain "foobar.com" or another domain altogether.</p>
+<h3>What is the role of the domain name?</h3>
+<p>The domain name plays a crucial role in identifying and locating resources on the internet. Its main functions include:</p>
+<p>(1) A domain name provides a human-readable and memorable way to identify and access resources on the internet. It serves as a unique label that represents a specific website, email server, or other online services.</p>
+<p>(2) A domain name serves as the address for a website. It enables users to access webpages by simply typing the domain name in a web browser, such as "www.example.com". It helps users navigate the vast web by providing a consistent and recognizable naming system.</p>
+<p>(3) A domain name can contribute to the branding and identity of individuals, businesses, organizations, or any online entity. It allows them to establish a distinct online presence and build recognition among their audience.</p>
+<p>(4) A domain name is commonly used to create professional and personalized email addresses, such as "name@example.com". It enables businesses and individuals to have custom email accounts associated with their domain, enhancing their professionalism and credibility.</p>
+<p>(5) Domain names are an integral part of the Domain Name System (DNS), which translates human-readable domain names into IP addresses. When you enter a domain name in a web browser or send an email, the DNS system translates the domain name into an IP address to locate the corresponding server where the requested resource is hosted.</p>
+<p>(6) Registering a domain name provides ownership and control over that specific online address. Domain owners can manage DNS settings, control website content, create email accounts, and determine how the domain is utilized.</p>
+<p><b>Overall</b>, the domain name serves as a fundamental component of the internet infrastructure, enabling users to access websites, resources, and services in a user-friendly manner while providing an identity and branding opportunity for online entities.</p>
