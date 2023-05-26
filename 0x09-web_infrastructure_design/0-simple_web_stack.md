@@ -1,1 +1,3 @@
-Empty
+<h1>SIMPLE WEB STACK</h1>
+![SIMPLE WEB STACK](https://github.com/Juliusmwash/alx-system_engineering-devops/blob/master/0x09-web_infrastructure_design/0-simple_web_stack.jpeg)
+
