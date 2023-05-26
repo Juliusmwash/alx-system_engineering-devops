@@ -1,5 +1,5 @@
 <h1>Distributed Web Infrastructure</h1>
-Want to familiarize yourself with the web infrastructure? Then <a href="web-infrastructure.md">click me</a>
+Want to familiarize yourself with the web infrastructure? Then <a href="web-infrastructure.md">click me</a> then <a href="1-distributed_web_infrastructure.md">click me</a>
 <h3><h3>Advantages of adding extra servers</h3>
 <p>Having a distributed infrastructure with multiple servers offers several advantages over a single server web infrastructure. Here are some key benefits:</p>
 <p>(1) <b>High availability</b>: With multiple servers, you can distribute the workload across them and implement redundancy. If one server fails or experiences issues, the load balancer can route traffic to the remaining servers, ensuring your website or application remains available to users. This improves reliability and minimizes downtime.</p>
