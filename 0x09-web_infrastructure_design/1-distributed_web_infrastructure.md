@@ -10,5 +10,10 @@ Want to familiarise yourself with the web infrastructure? Then <a href="web-infr
 <p><b>(5) Flexibility and fault tolerance</b>: With multiple servers, you have the flexibility to perform maintenance or updates on one server without impacting the availability of your application. Additionally, if a server experiences a hardware failure or other issues, the load balancer can route traffic to the remaining servers, ensuring fault tolerance and uninterrupted service.</p>
 <p><b>(6) Load balancing</b>: The load balancer distributes incoming requests across the servers based on predefined algorithms (e.g., round-robin, least connections, etc.). This helps evenly distribute the workload, prevents overload on a single server, and optimizes resource utilization.</p>
 <p><b>(7) Easy scaling and resource allocation</b>: When you need to scale your infrastructure further, adding additional servers to the pool is relatively straightforward. Load balancers can automatically detect new servers and include them in the rotation. Similarly, resources such as CPU, memory, and storage can be allocated and balanced across the servers as needed.</p>
+
+
+
+
+
 <p>A distributed infrastructure with multiple servers and a load balancer provides improved availability, scalability, performance, security, fault tolerance, and flexibility compared to a single server web infrastructure. It allows you to handle larger workloads, better serve your users, and ensure continuous operation even during server failures or maintenance.</p>
 
