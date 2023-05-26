@@ -13,4 +13,7 @@
 <p>The <b>authoritative DNS server</b> responds to the <b>resolver</b> with the IP address associated with the requested domain. It provides the resolver with the necessary mapping of the domain name to the IP address.</p>
 <p>The resolver <b>caches</b> the IP address obtained from the authoritative DNS server for a certain period of time (<b>TTL - Time to Live</b>). This caching reduces the need for future DNS lookups for the same domain, improving efficiency. The resolver then provides the IP address to the browser.</p>
 <p>Armed with the IP address, the browser can now establish a connection with the web server hosting the requested website. It uses the IP address to initiate a <b>TCP/IP</b> connection, typically over port 80 for HTTP or port 443 for HTTPS.</p>
+<p><b>In conclusion</b>, the DNS lookup process involves iterative queries starting from the root DNS servers, going through the TLD DNS server, and finally reaching the authoritative DNS server responsible for the specific domain. The IP address obtained through this process allows the browser to establish a connection with the appropriate web server and retrieve the requested web content.</p>
+<h3>Web server</h3>
+<p>
 
