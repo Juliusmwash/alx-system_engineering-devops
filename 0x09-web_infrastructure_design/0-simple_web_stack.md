@@ -4,7 +4,8 @@
 ![SIMPLE WEB STACK](./0-simple_web_stack.jpg)
 
 
-<h3>Client requesting for a website</h3>  
+<h3>Client requesting for a website<br>DNS Server</h3>
+
 <p>When a web browser receives a URL, from the user, it first checks its <b>local DNS cache</b> to see if it has recently resolved the corresponding <b>IP address</b>(in our case 'www.foobar.com'). This cache stores previously resolved domain-to-IP mappings to improve performance and reduce the need for repeated lookups.</p>
 <p>If the IP address is not found in the local DNS cache, the browser contacts a <b>DNS resolver</b> (typically provided by the Internet Service Provider or a public resolver). The resolver acts as a middleman in the DNS lookup process. The resolver doesn't have the answer but knows how to find it.</p>
 <p>The resolver starts a recursive DNS lookup process. It begins by contacting the <b>root DNS servers</b>. These servers are the starting point for resolving any domain name. There are a few root DNS servers distributed worldwide, identified by letters from A to M.</p>
