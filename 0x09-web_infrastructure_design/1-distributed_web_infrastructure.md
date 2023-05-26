@@ -10,7 +10,32 @@ Want to familiarise yourself with the web infrastructure? Then <a href="web-infr
 <p><b>(5) Flexibility and fault tolerance</b>: With multiple servers, you have the flexibility to perform maintenance or updates on one server without impacting the availability of your application. Additionally, if a server experiences a hardware failure or other issues, the load balancer can route traffic to the remaining servers, ensuring fault tolerance and uninterrupted service.</p>
 <p><b>(6) Load balancing</b>: The load balancer distributes incoming requests across the servers based on predefined algorithms (e.g., round-robin, least connections, etc.). This helps evenly distribute the workload, prevents overload on a single server, and optimizes resource utilization.</p>
 <p><b>(7) Easy scaling and resource allocation</b>: When you need to scale your infrastructure further, adding additional servers to the pool is relatively straightforward. Load balancers can automatically detect new servers and include them in the rotation. Similarly, resources such as CPU, memory, and storage can be allocated and balanced across the servers as needed.</p>
-<p></p>
-<p></p>
 <p>A distributed infrastructure with multiple servers and a load balancer provides improved availability, scalability, performance, security, fault tolerance, and flexibility compared to a single server web infrastructure. It allows you to handle larger workloads, better serve your users, and ensure continuous operation even during server failures or maintenance.</p>
-
+<h3>Load balancer algorithims</h3>
+<p><b>What is a load balancer and how does it work?</b></p>
+<p>A <b>load balancer</b> is a device or software component that acts as an intermediary between clients (users or other systems) and a group of backend servers. Its primary function is to distribute incoming network traffic across multiple servers to ensure efficient utilization of resources and improve the performance, availability, and reliability of a system or application.</p>
+<p>Load balancer algorithms determine how incoming requests are distributed across multiple servers in a distributed infrastructure. Each algorithm has its own approach to load balancing and offers different advantages depending on the specific requirements of the system. Here are some commonly used load balancer algorithms:</pi>
+<p>(1) Round Robin</p>
+<p>(2) Least Connections</p>
+<p>(3) IP Hash</p>
+<p>(4) Least Response Time</p>
+<p>(5) Weighted Round Robin</p>
+<p>(6) Random</p>
+<p>Since our web infrastructure design is making use of  round robin load balancer algorithm, lets explore how it operates</p>
+<p><b>Round Robin load balancer algorithm</b> is a simple and widely used approach for distributing incoming requests across multiple servers in a load balancing setup. It aims to evenly distribute the traffic load among the available servers in a cyclic manner.
+<p><b>Here's how it works</b>:</p>
+<p>The algorithm starts with a list of backend servers that are participating in the load balancing. The servers can be in any order initially.</p>
+<p>When a new request arrives, the Round Robin algorithm forwards the request to the next server in line according to the predetermined order. For example, if the servers are listed as A, B, and C, the first request will go to server A, the second request to server B, the third request to server C, and so on.</p>
+<p>After each request is processed, the algorithm moves to the next server in the list. When it reaches the end of the list, it starts again from the beginning, creating a <b>cyclic rotation</b>. This ensures that requests are evenly distributed across all servers in a circular fashion.</p>
+<p>Round Robin load balancing aims to provide fairness by giving each server an equal opportunity to handle incoming requests. As long as all servers have similar capabilities and resources, the algorithm distributes the load evenly among them.</p>
+<p>The Round Robin algorithm is stateless, meaning it does not consider the current load or performance of the servers. It treats all servers equally and assumes that each server can handle the same amount of traffic.</p>
+<p><b>Points to note</b></p>
+<p>Round Robin load balancing doesn't take into account factors such as server health, response time, or capacity. If the servers in the pool have different capabilities or if their workload varies, Round Robin may not provide optimal load distribution. In such cases, other load balancing algorithms, like weighted round robin or least connections, might be more suitable.</p>
+<p>Round Robin load balancing is relatively simple to implement and can be an effective approach for evenly distributing traffic across multiple servers. However, its effectiveness depends on the characteristics and demands of the system, and it may not be the best choice in all scenarios.</p>
+<p><b>Active-active or Active-passive system?</b></p>
+<p>Here's an explanation of the difference between the two:</p>
+<p>(1) <b>Active-Active setup</b>: In an Active-Active setup, all servers in the load balancing pool are actively serving traffic and processing requests simultaneously. The load balancer evenly distributes incoming requests across all active servers, and each server handles its share of the load independently. This setup allows for parallel processing and scalability since multiple servers are actively handling traffic at the same time. If one server fails or becomes unavailable, the other active servers continue to handle the requests, ensuring high availability.</p>
+<p>(2) <b>Active-Passive setup</b>: In an Active-Passive setup, there is a primary or active server that actively serves traffic and processes requests, while the other servers remain in a passive or standby state. The load balancer directs all incoming requests to the active server, and it handles the entire workload. The passive servers are there as backups, ready to take over if the active server fails. In this setup, the passive servers typically remain idle, only becoming active when the primary server goes down. The failover process involves the load balancer detecting the failure and redirecting traffic to the passive server(s) to ensure continuity of service.</p>
+<p>--- The choice between an Active-Active or Active-Passive setup depends on the specific requirements and goals of your system.</p>
+<p>--- Active-Active setups provide better scalability, as multiple servers share the load simultaneously, but they require more complex synchronization and coordination between servers.</p>
+<p>--- Active-Passive setups are simpler to implement and manage but may have slightly higher response times during failover events since the passive server(s) need to take over the workload.</p>
