@@ -30,13 +30,13 @@ If not all, almost everything has been fully explained <a href="web-infrastructu
 <p>SPOF stands for Single Point of Failure. In the context of a web infrastructure sharing one server, SPOF refers to a component or element that, if it fails, can cause a complete disruption of the entire system or service.</p>
 <p>When multiple websites or services are hosted on a single server, there are potential risks associated with having a SPOF. If the server encounters a critical failure, such as hardware malfunction or software crash, all the websites and services relying on that server will become inaccessible.</p>
 <p>Having a SPOF can lead to significant downtime, loss of revenue, and negative impact on user experience. Therefore, it's generally recommended to design web infrastructures with redundancy and failover mechanisms to mitigate the risk of SPOFs.</p>
-<p><b>Some common strategies to address SPOFs in a web infrastructure include<b>:</p>
+<p><b>Some common strategies to address SPOFs in a web infrastructure include</b>:</p>
 <p>(1) <b>Load Balancing</b>: Distributing incoming traffic across multiple servers to ensure a more balanced workload. This helps prevent one server from becoming overwhelmed and reduces the risk of a single server failure affecting all services.
 <p>(2) <b>Server Clustering</b>: Creating a cluster of servers that work together and share the workload. If one server fails, the other servers in the cluster can take over the workload to maintain service availability.</p>
 <p>(3) <b>Redundant Hardware</b>: Using redundant components, such as redundant power supplies, network connections, and storage systems, to minimize the impact of a hardware failure.</p>
 <p>(4) <b>Backup and Disaster Recovery</b>: Implementing regular data backups and disaster recovery plans to quickly recover from failures and minimize downtime.</p>
 <p>By implementing these strategies, organizations can minimize the risk of a single server failure causing widespread disruptions, enhance the availability of their web services, and improve overall reliability.</p>
 <h3>Downtime when maintenance needed</h3>
-<p>Performing maintenance tasks that require restarting the web server can result in downtime. During the maintenance period, the website or service hosted on that server will be inaccessible to users.<p>
+<p>Performing maintenance tasks that require restarting the web server can result in downtime. During the maintenance period, the website or service hosted on that server will be inaccessible to users.</p>
 <p>The duration of the downtime depends on various factors, including the time required to deploy the new code, restart the web server, and ensure that everything is functioning correctly after the restart. It can typically range from a few seconds to several minutes, depending on the complexity of the application and the specific maintenance tasks being performed.</p>
 
