@@ -1,4 +1,5 @@
 <h1>Secured and monitored web infrastructure</h1>
+<img src="2-secured_and_monitored_web_infrastructure.PNG" alt="Task 2">
 <p>If stuck somewhere in this file, having a look at the following link might help you understand better. Here is the <a href="1-distributed_web_infrastructure.md">link</a>.</p>
 <h3>Firewalls</h3>
 <p>Firewalls are security devices or software applications that monitor and control the network traffic between different networks, such as the Internet and a private local area network (LAN). Their primary purpose is to enforce a set of rules or policies that determine which network connections and communication packets are allowed to pass through and which ones should be blocked.</p>
