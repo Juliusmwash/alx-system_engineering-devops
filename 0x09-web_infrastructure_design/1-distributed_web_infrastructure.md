@@ -1,4 +1,5 @@
 <h1>Distributed Web Infrastructure</h1>
+<img src="1-distributed_web_infrastructure.PNG" alt="Task 1">
 Want to familiarize yourself with the web infrastructure? Then <a href="0-simple_web_stack.md">click me</a>
 <h3><h3>Advantages of adding extra servers</h3>
 <p>Having a distributed infrastructure with multiple servers offers several advantages over a single server web infrastructure. Here are some key benefits:</p>
