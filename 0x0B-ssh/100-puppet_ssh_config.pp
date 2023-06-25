@@ -1,12 +1,6 @@
-file_line { 'Turn off passwd auth':
-  path   => '/etc/ssh/sshd_config',
-  line   => 'PasswordAuthentication no',
-  match  => '^#?PasswordAuthentication',
+# Changes SSH config file
+exec { 'echo':
+  path    => 'usr/bin:/bin',
+  command => 'echo "    IdentityFile ~/.ssh/holberton\n    PasswordAuthentication no" >> /etc/ssh/ssh_config',
+  returns => [0,1],
 }
-
-file_line { 'Declare identity file':
-  path   => '/etc/ssh/ssh_config',
-  line   => 'IdentityFile ~/.ssh/school',
-  match  => '^#?IdentityFile',
-}
-
