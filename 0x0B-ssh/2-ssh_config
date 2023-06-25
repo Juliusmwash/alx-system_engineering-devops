@@ -18,6 +18,10 @@
 
 Include /etc/ssh/ssh_config.d/*.conf
 
+Host 34.207.155.64
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+
 Host *
 #   ForwardAgent no
 #   ForwardX11 no
