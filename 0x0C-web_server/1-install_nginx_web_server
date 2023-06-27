@@ -3,11 +3,11 @@
 #+	on port 80 and return "Hello World" when querried
 #+	on its root
 
-# Update the package lists
-apt update
+# update packages lists
+apt-get update
 
 # Install Nginx
-apt install -y nginx
+apt-get install -y nginx
 
 # Configure Nginx
 cat > /etc/nginx/sites-available/default <<EOF
