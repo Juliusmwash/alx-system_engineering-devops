@@ -3,6 +3,6 @@
 apt-get -y update
 apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+echo -e "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>ERROR 404</title>\n\t</head>\n\t<body>\n\t\t<h1>Ceci n'est pas une page</h1>\n\t</body>\n</html>" > /var/www/html/error_404.html
 sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/luischaparroc permanent;\n\n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\t\troot \/usr\/share\/nginx\/html;\n\t\tinternal;\n\t}/" /etc/nginx/sites-available/default
 service nginx start
