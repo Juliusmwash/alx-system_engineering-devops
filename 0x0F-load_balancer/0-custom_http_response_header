@@ -2,17 +2,12 @@
 # Configure Nginx so that its HTTP response contains a custom
 #+	header
 
-apt-get update
-apt-get install -y nginx
+git clone --quiet https://github.com/Juliusmwash/alx-system_engineering-devops.git
 
-configure_nginx() {
-  ssh -i ~/.ssh/school ubuntu@"$1" << EOF
-    sudo sed -i 's/# server_tokens off;/server_tokens off;/' /etc/nginx/nginx.conf
-    sudo sed -i '/http {/a\\\tadd_header X-Served-By \$hostname;' /etc/nginx/nginx.conf
-    sudo service nginx restart
-EOF
-}
+mv alx-system_engineering-devops/0x0C-web_server/4-not_found_page_404 .
+rm -rf alx-system_engineering-devops
+sudo ./4-not_found_page_404
 
-configure_nginx "34.207.155.64"
-configure_nginx "54.208.222.77"
+sudo sed -i "/http {/a\\\tadd_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
+sudo service nginx restart
 
