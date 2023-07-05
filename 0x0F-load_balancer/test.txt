@@ -1,0 +1,6 @@
+server {
+    # code
+    http {
+        # code
+    }
+}
