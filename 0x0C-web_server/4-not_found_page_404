@@ -12,7 +12,7 @@ echo -e "<!DOCTYPE html>\n<html>\n  <head>\n    <title>ERROR 404</title>\n  </he
 
 #echo -e "<!DOCTYPE html>\n<html>\n  <head>\n    <title>ERROR 404</title>\n  </head>\n  <body>\n    <h1>Ceci n'est pas une page</h1>\n  </body>\n</html>" > /usr/share/nginx/html/custom_404.html
 
-awk '{print} /}/ && ++count == 3 {system("echo \"    error_page 404 /404.html;\"")}' /etc/nginx/sites-available/default > mwass.txt && cat mwass.txt > /etc/nginx/sites-available/default
+awk '{print} /}/ && ++count == 3 {system("echo \"\\n    error_page 404 /404.html;\"")}' /etc/nginx/sites-available/default > mwass.txt && cat mwass.txt > /etc/nginx/sites-available/default
 
 rm mwass.txt
 
