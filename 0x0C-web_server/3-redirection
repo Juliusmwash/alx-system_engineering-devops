@@ -1,8 +1,10 @@
 #!/bin/env bash
 # Redirect to another page
 
-apt-get update
-apt-get install -y nginx
+git clone --quiet https://github.com/Juliusmwash/alx-system_engineering-devops.git
+mv alx-system_engineering-devops/0x0C-web_server/1-install_nginx_web_server .
+rm -rf alx-system_engineering-devops
+./1-install_nginx_web_server
 
 # method 1
 #sed -i "0,\|}|s||& \\n\\n\\tlocation /redirect_me {\\n\\t\\treturn 301 https://google.com\\n\\t}|" /etc/nginx/sites-available/default
