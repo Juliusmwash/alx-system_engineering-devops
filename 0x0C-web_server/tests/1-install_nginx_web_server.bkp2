@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# This script installs nginx and configures it to listen
+#+	on port 80 and return "Hello World" when querried
+#+	on its root
+
+# update packages lists
+apt-get update
+
+# Install Nginx
+apt-get install -y nginx
+
+# Configure Nginx
+cat > /etc/nginx/sites-available/default <<EOF
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html;
+
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+
+    location = / {
+        return 200 "Hello World!\n";
+    }
+}
+EOF
+
+# Restart Nginx
+service nginx restart

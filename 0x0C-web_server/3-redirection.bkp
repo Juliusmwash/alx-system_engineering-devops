@@ -1,0 +1,5 @@
+#!/bin/env bash
+# Redirect to another page
+
+sed -i "0,\|}|s||& \\n\\n\\tlocation /redirect_me {\\n\\t\\treturn 301 https://google.com\\n\\t}|" /etc/nginx/sites-available/default
+

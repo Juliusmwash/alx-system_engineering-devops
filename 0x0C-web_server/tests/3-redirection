@@ -1,14 +1,12 @@
 #!/bin/env bash
 # Redirect to another page
 
-apt-get update
-apt-get install -y nginx
-
 # method 1
 #sed -i "0,\|}|s||& \\n\\n\\tlocation /redirect_me {\\n\\t\\treturn 301 https://google.com\\n\\t}|" /etc/nginx/sites-available/default
 
 # method 2
+#awk '{print} /}/ && ++count == 2 {system("echo \n\tlocation /redirect_me {\n\t\treturn 301 https://google.com\n\t} ")} ' test.txt > mwass.txt ; mv mwass.txt test.txt
+
 #awk '{print} /}/ && ++count == 2 {system("echo \"\\n\\tlocation /redirect_me {\\n\\t\\treturn 301 https://google.com\\n\\t}\"")}' test.txt > mwass.txt && mv mwass.txt test.txt
 
-awk '{print} /}/ && ++count == 2 {system("echo \"\\n    location /redirect_me {\\n        return 301 https://google.com\\n    }\"")}' /etc/nginx/sites-available/default > mwass.txt && cat mwass.txt > /etc/nginx/sites-available/default
-rm mwass.txt
+awk '{print} /}/ && ++count == 2 {system("echo \"\\n    location /redirect_me {\\n        return 301 https://google.com\\n    }\"")}' test.txt > mwass.txt && mv mwass.txt test.txt
