@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Redirect to another page
 
 git clone --quiet https://github.com/Juliusmwash/alx-system_engineering-devops.git
