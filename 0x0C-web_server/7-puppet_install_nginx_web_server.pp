@@ -1,7 +1,7 @@
 # Installs a Nginx server
 
-exec {'install':
+exec {'configure_server':
   provider => shell,
-  command => 'sudo apt-get -y update ; sudo apt-get -y install nginx ; echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html ; sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 break;\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;/" /etc/nginx/sites-available/default ; sudo service nginx start',
+  command => 'git clone https://github.com/Juliusmwash/alx-system_engineering-devops.git ; mv alx-system_engineering-devops/0x0C-web_server/1-install_nginx_web_server . ; mv alx-system_engineering-devops/0x0C-web_server/4-not_found_page_404 . ; ./1-install_nginx_web_server ; ./4-not_found_page_404',
+  path => '/usr/bin:/bin:/path/to',
 }
-
