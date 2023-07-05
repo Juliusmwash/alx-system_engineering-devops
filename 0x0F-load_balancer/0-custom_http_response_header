@@ -8,6 +8,10 @@ mv alx-system_engineering-devops/0x0C-web_server/4-not_found_page_404 .
 rm -rf alx-system_engineering-devops
 sudo ./4-not_found_page_404
 
-sudo sed -i "/http {/a\\\tadd_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
+#sudo sed -i "/http {/a\\\tadd_header X-Served-By \$hostname;" /etc/nginx/nginx.conf
+sudo sed -i "/http {/a\    add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default
+sudo sed -i "/server {/a\    add_header Last-Modified \$date_gmt;" /etc/nginx/sites-available/default
+sudo sed -i "/server {/a\    add_header Accept-Ranges bytes;" /etc/nginx/sites-available/default
+sudo sed -i "/server {/a\    etag on;" /etc/nginx/sites-available/default
 sudo service nginx restart
 
