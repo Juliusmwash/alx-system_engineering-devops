@@ -12,6 +12,6 @@ rm -rf alx-system_engineering-devops
 # method 2
 #awk '{print} /}/ && ++count == 2 {system("echo \"\\n\\tlocation /redirect_me {\\n\\t\\treturn 301 https://google.com\\n\\t}\"")}' test.txt > mwass.txt && mv mwass.txt test.txt
 
-awk '{print} /}/ && ++count == 2 {system("echo \"\\n    location /redirect_me {\\n        return 301 https://google.com;\\n    }\"")}' /etc/nginx/sites-available/default > mwass.txt && cat mwass.txt > /etc/nginx/sites-available/default
+awk '{print} /}/ && ++count == 2 {system("echo \"\\n    location /redirect_me {\\n        return 301 https://www.google.com;\\n    }\"")}' /etc/nginx/sites-available/default > mwass.txt && cat mwass.txt > /etc/nginx/sites-available/default
 rm mwass.txt
-service nginx start
+sudo service nginx restart
