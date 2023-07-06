@@ -3,41 +3,45 @@
 #+    Enables management via the init script.
 #+    Distributes requests using a round-robin algorithm.
 
-sudo apt update
-sudo apt install -y haproxy
-sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.backup
-sudo tee /etc/haproxy/haproxy.cfg > /dev/null <<EOT
-global
-    log /dev/log    local0
-    log /dev/log    local1 notice
-    chroot /var/lib/haproxy
-    stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners
-    stats timeout 30s
+#apt-get install -y software-properties-common
+#add-apt-repository -y ppa:vbernat/haproxy-1.8
+#apt-get update
+#apt-get install -y haproxy=1.8.\*
+
+sudo apt-get update
+sudo apt-get install -y haproxy
+
+echo "ENABLED=1" >> /etc/default/haproxy
+mv /etc/haproxy/haproxy.cfg{,.original}
+touch /etc/haproxy/haproxy.cfg
+
+printf %s "global
+    log 127.0.0.1 local0 notice
+    maxconn 2000
     user haproxy
     group haproxy
-    daemon
 
 defaults
     log     global
     mode    http
     option  httplog
     option  dontlognull
-    timeout connect 5000
-    timeout client  50000
-    timeout server  50000
+    retries 3
+    option redispatch
+    timeout connect  5000
+    timeout client  10000
+    timeout server  10000
 
-frontend http_front
-    bind *:80
+listen hbnb
+    bind 0.0.0.0:80
+    mode http
+    stats enable
     stats uri /haproxy?stats
-    default_backend http_back
-
-backend http_back
     balance roundrobin
+    option httpclose
+    option forwardfor
     server 200714-web-01 100.25.16.12:80 check
     server 200714-web-02 35.153.17.49:80 check
-EOT
+" >> /etc/haproxy/haproxy.cfg
 
-# Enable HAProxy init script
-sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
-sudo service haproxy restart
-
+service haproxy start
