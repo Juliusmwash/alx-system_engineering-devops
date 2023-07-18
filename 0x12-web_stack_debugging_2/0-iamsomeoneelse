@@ -8,10 +8,11 @@ fi
 username=$1
 
 # Check if the user exists
-if ! id "$username" &>/dev/null; then
-    exit 1
-fi
+#if ! id "$username" &>/dev/null; then
+#    exit 1
+#fi
 
 # Run the 'whoami' command as the specified user
-sudo su -u "$username" -c "whoami"
+#sudo -u "$username" -c "whoami"
+sudo su "$username" whoami
 
