@@ -12,6 +12,6 @@ echo -e "<!DOCTYPE html>\n<html>\n  <head>\n    <title>ERROR 404</title>\n  </he
 
 awk '{print} /}/ && ++count == 3 {system("echo \"\\n    error_page 404 /404.html;\"")}' /etc/nginx/sites-available/default > mwass.txt && cat mwass.txt > /etc/nginx/sites-available/default
 
-rm mwass.txt
+awk '{print} /}/ && ++count == 3 {system("echo \"\\n    location /hbnb_static {\\n        alias /data/web_static/current/;\\n    }\"")}' /etc/nginx/sites-available/default > mwass.txt && cat mwass.txt > /etc/nginx/sites-available/default
 
-sudo service nginx restart
+rm mwass.txt
