@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Checks the user name
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <username>"
+    exit 1
+fi
+username=$1
+
+# Check if the user exists
+if ! id "$username" &>/dev/null; then
+    exit 1
+fi
+
+# Run the 'whoami' command as the specified user
+su "$username" -c "whoami"
+
