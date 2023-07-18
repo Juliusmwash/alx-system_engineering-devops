@@ -13,5 +13,5 @@ if ! id "$username" &>/dev/null; then
 fi
 
 # Run the 'whoami' command as the specified user
-su "$username" -c "whoami"
+sudo su -u "$username" -c "whoami"
 
