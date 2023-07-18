@@ -14,5 +14,5 @@ username=$1
 
 # Run the 'whoami' command as the specified user
 #sudo -u "$username" -c "whoami"
-sudo su - "$username" whoami
+sudo su - "$username" -c "whoami"
 
