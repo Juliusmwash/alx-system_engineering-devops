@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# The script to backup mysql database data
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <mysql_password>"
+    exit 1
+fi
+
+mysql_password="$1"
+current_date=$(date +'%d-%m-%Y')
+mysqldump -u root -p"$mysql_password" --all-databases > backup.sql
+tar -czvf "$current_date.tar.gz" backup.sql
+rm backup.sql
+
