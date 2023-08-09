@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that defines count_words recursive function
+Module that defines recursive function 'count_words'
 """
 import requests
 
