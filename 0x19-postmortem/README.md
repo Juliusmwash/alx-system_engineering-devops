@@ -1,12 +1,12 @@
-# Incident Report - Acme Services
+# Incident Report - J&G Services
 
 ## Introduction
 
-This document provides an overview of a service disruption incident that occurred within Acme Services on August 10, 2023. We apologize for any inconvenience caused and aim to offer a transparent account of the incident, its root cause, our response, and the measures we're taking to prevent future occurrences.
+This document provides an overview of a service disruption incident that occurred within J&G Services on August 10, 2023. We apologize for any inconvenience caused and aim to offer a transparent account of the incident, its root cause, our response, and the measures we're taking to prevent future occurrences.
 
 ## Issue Summary
 
-Between 9:00 AM and 11:30 AM EST, several key services within Acme's platform experienced unavailability and reduced performance. This incident affected a subset of users who rely on these services for their daily operations.
+Between 9:00 AM and 11:30 AM EST, several key services within J&G Services' platform experienced unavailability and reduced performance. This incident affected a subset of users who rely on these services for their daily operations.
 
 ## Timeline (Eastern Standard Time, EST)
 
@@ -39,9 +39,9 @@ To minimize the risk of similar incidents in the future, we are taking the follo
 
 ## Conclusion
 
-We regret any inconvenience caused by this incident and appreciate your patience and understanding. Acme Services remains committed to delivering reliable and resilient services to our valued users. We will continue to learn from incidents and invest in the improvement of our systems to provide a seamless experience.
+We regret any inconvenience caused by this incident and appreciate your patience and understanding. J&G Services remains committed to delivering reliable and resilient services to our valued users. We will continue to learn from incidents and invest in the improvement of our systems to provide a seamless experience.
 
 Sincerely,
 
-The Acme Services Team
+The J&G Services Team
 
