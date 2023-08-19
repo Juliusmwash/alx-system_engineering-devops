@@ -1,0 +1,22 @@
+# Configure Nginx to serve page from the route /airbnb-onepage/
+
+server {
+    # listen on port 80
+    listen 80;
+
+    # Use ip address as the server name
+    server_name 100.25.16.12;
+
+    # Add header to the response
+    add_header  X-Served-By 200714-web-01;
+
+    # Route to serve Airbnb_clone_v2
+    location ^~ /airbnb-onepage/ {
+        proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+    }
+
+    # Serve /number_odd_or_even/ route on AirBnB_clone_v2
+    location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+        proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+    }
+}
